@@ -1,12 +1,16 @@
 ## 目录
 
-1. [建表规约](#buildtable)
-1. [索引规约](#index)
-1. [SQL语句](#sql)
-1. [ORM映射](#orm)
+- [4. Mysql数据库设计规范](#mysql)
+  - [4.1. 建表规约](#buildtable)
+  - [4.2. 索引规约](#index)
+  - [4.3. SQL语句](#sql)
+  - [4.4. ORM映射](#orm)
+
+<a name="mysql"></a>
+# 4. Mysql数据库设计规范
 
 <a name="buildtable"></a>
-## 建表规约
+## 4.1. 建表规约
 
 1. <font color=bc0008>【强制】</font>表达是与否概念的字段，必须使用 is_xxx 的方式命名，数据类型是 unsigned tinyint(1 表示是，0 表示否)。
 
@@ -66,7 +70,7 @@
 | 太阳 | 约 50 亿年 | bigint unsigned | 8 | 无符号值:0 到约 10 的 19 次方 |
 
 <a name="index"></a>
-## 索引规约
+## 4.2. 索引规约
 
 1. <font color=bc0008>【强制】</font>业务上具有唯一特性的字段，即使是多个字段的组合，也必须建成唯一索引。 
 
@@ -125,7 +129,7 @@
 		3) 抵制惟一索引。认为业务的惟一性一律需要在应用层通过“先查后插”方式解决。
 
 <a name="sql"></a>
-## SQL语句
+## 4.3. SQL语句
 
 1. <font color=bc0008>【强制】</font>不要使用count(列名)或count(常量)来替代count(*)，count(*)是SQL92定义的 标准统计行数的语法，跟数据库无关，跟 NULL 和非 NULL 无关。
 
@@ -162,7 +166,7 @@
     <font color=977919>说明:</font>TRUNCATE TABLE 在功能上与不带 WHERE 子句的 DELETE 语句相同。
 
 <a name="orm"></a>
-## ORM映射
+## 4.4. ORM映射
 
 1. <font color=bc0008>【强制】</font>在表查询中，一律不要使用 * 作为查询的字段列表，需要哪些字段必须明确写明。 
 
