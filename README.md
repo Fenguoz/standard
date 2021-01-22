@@ -23,3 +23,15 @@
   - [6.1. 异常处理](Log.md/#exception)
   - [6.2. 日志规约](Log.md/#log)
 - [7. 安全规范](Safe.md/#safe)
+
+
+## 版本历史
+
+| 版本号 | 版本名 | 更新时间 | 备注 |
+| :-----:| :----: | :----: | :---- |
+| 0.1.0 | 试读版 | 2021.01.22 | - |
+
+## 名词解释
+
+1. ORM(Object Relation Mapping): 对象关系映射，对象领域模型与底层数据之间的转换， 本文泛指 Laravel,Hyperf 等框架。
+1. NPE(java.lang.NullPointerException): 空指针异常。
